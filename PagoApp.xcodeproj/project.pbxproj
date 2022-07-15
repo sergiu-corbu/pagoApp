@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		ECE18D1F28818E4A003629AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D1E28818E4A003629AB /* AppDelegate.swift */; };
 		ECE18D2128818E4A003629AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D2028818E4A003629AB /* SceneDelegate.swift */; };
-		ECE18D2328818E4A003629AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D2228818E4A003629AB /* ViewController.swift */; };
-		ECE18D2628818E4A003629AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE18D2428818E4A003629AB /* Main.storyboard */; };
+		ECE18D2328818E4A003629AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D2228818E4A003629AB /* MainViewController.swift */; };
 		ECE18D2928818E4A003629AB /* PagoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D2728818E4A003629AB /* PagoApp.xcdatamodeld */; };
 		ECE18D2B28818E4B003629AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE18D2A28818E4B003629AB /* Assets.xcassets */; };
 		ECE18D2E28818E4B003629AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE18D2C28818E4B003629AB /* LaunchScreen.storyboard */; };
+		ECE18D362881916A003629AB /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D352881916A003629AB /* ContactModel.swift */; };
+		ECE18D39288191AA003629AB /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D38288191AA003629AB /* BackendService.swift */; };
+		ECE18D3C28819432003629AB /* HTTPClient + Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D3B28819432003629AB /* HTTPClient + Configuration.swift */; };
+		ECE18D3E288194A2003629AB /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D3D288194A2003629AB /* HTTPClient.swift */; };
+		ECE18D4028819534003629AB /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D3F28819534003629AB /* HTTPRequest.swift */; };
+		ECE18D4228819554003629AB /* HTTPrequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D4128819554003629AB /* HTTPrequestError.swift */; };
+		ECE18D4428819769003629AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D4328819769003629AB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ECE18D1B28818E4A003629AB /* PagoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE18D1E28818E4A003629AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE18D2028818E4A003629AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECE18D2228818E4A003629AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECE18D2528818E4A003629AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECE18D2228818E4A003629AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ECE18D2828818E4A003629AB /* PagoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PagoApp.xcdatamodel; sourceTree = "<group>"; };
 		ECE18D2A28818E4B003629AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECE18D2D28818E4B003629AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECE18D2F28818E4B003629AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECE18D352881916A003629AB /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		ECE18D38288191AA003629AB /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
+		ECE18D3B28819432003629AB /* HTTPClient + Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient + Configuration.swift"; sourceTree = "<group>"; };
+		ECE18D3D288194A2003629AB /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		ECE18D3F28819534003629AB /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		ECE18D4128819554003629AB /* HTTPrequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPrequestError.swift; sourceTree = "<group>"; };
+		ECE18D4328819769003629AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +72,36 @@
 			children = (
 				ECE18D1E28818E4A003629AB /* AppDelegate.swift */,
 				ECE18D2028818E4A003629AB /* SceneDelegate.swift */,
-				ECE18D2228818E4A003629AB /* ViewController.swift */,
-				ECE18D2428818E4A003629AB /* Main.storyboard */,
+				ECE18D2228818E4A003629AB /* MainViewController.swift */,
+				ECE18D4328819769003629AB /* Constants.swift */,
+				ECE18D3A288191B4003629AB /* Services */,
+				ECE18D3728819170003629AB /* Model */,
 				ECE18D2A28818E4B003629AB /* Assets.xcassets */,
 				ECE18D2C28818E4B003629AB /* LaunchScreen.storyboard */,
 				ECE18D2F28818E4B003629AB /* Info.plist */,
 				ECE18D2728818E4A003629AB /* PagoApp.xcdatamodeld */,
 			);
 			path = PagoApp;
+			sourceTree = "<group>";
+		};
+		ECE18D3728819170003629AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECE18D352881916A003629AB /* ContactModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECE18D3A288191B4003629AB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ECE18D38288191AA003629AB /* BackendService.swift */,
+				ECE18D3B28819432003629AB /* HTTPClient + Configuration.swift */,
+				ECE18D3D288194A2003629AB /* HTTPClient.swift */,
+				ECE18D3F28819534003629AB /* HTTPRequest.swift */,
+				ECE18D4128819554003629AB /* HTTPrequestError.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +164,6 @@
 			files = (
 				ECE18D2E28818E4B003629AB /* LaunchScreen.storyboard in Resources */,
 				ECE18D2B28818E4B003629AB /* Assets.xcassets in Resources */,
-				ECE18D2628818E4A003629AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE18D3C28819432003629AB /* HTTPClient + Configuration.swift in Sources */,
+				ECE18D4428819769003629AB /* Constants.swift in Sources */,
 				ECE18D2928818E4A003629AB /* PagoApp.xcdatamodeld in Sources */,
-				ECE18D2328818E4A003629AB /* ViewController.swift in Sources */,
+				ECE18D3E288194A2003629AB /* HTTPClient.swift in Sources */,
+				ECE18D2328818E4A003629AB /* MainViewController.swift in Sources */,
 				ECE18D1F28818E4A003629AB /* AppDelegate.swift in Sources */,
+				ECE18D362881916A003629AB /* ContactModel.swift in Sources */,
+				ECE18D4228819554003629AB /* HTTPrequestError.swift in Sources */,
+				ECE18D4028819534003629AB /* HTTPRequest.swift in Sources */,
+				ECE18D39288191AA003629AB /* BackendService.swift in Sources */,
 				ECE18D2128818E4A003629AB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ECE18D2428818E4A003629AB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECE18D2528818E4A003629AB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECE18D2C28818E4B003629AB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
