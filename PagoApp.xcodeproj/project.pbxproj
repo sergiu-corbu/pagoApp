@@ -20,6 +20,10 @@
 		ECE18D4028819534003629AB /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D3F28819534003629AB /* HTTPRequest.swift */; };
 		ECE18D4228819554003629AB /* HTTPrequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D4128819554003629AB /* HTTPrequestError.swift */; };
 		ECE18D4428819769003629AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D4328819769003629AB /* Constants.swift */; };
+		ECE18D4828819DBB003629AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE18D4728819DBB003629AB /* Main.storyboard */; };
+		ECE18D4B28819DE0003629AB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D4A28819DE0003629AB /* MainViewModel.swift */; };
+		ECE18D4D28819E13003629AB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D4C28819E13003629AB /* ContactCell.swift */; };
+		ECE18D512881B578003629AB /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D502881B578003629AB /* UIColor + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		ECE18D3F28819534003629AB /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		ECE18D4128819554003629AB /* HTTPrequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPrequestError.swift; sourceTree = "<group>"; };
 		ECE18D4328819769003629AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ECE18D4728819DBB003629AB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ECE18D4A28819DE0003629AB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		ECE18D4C28819E13003629AB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		ECE18D502881B578003629AB /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +80,14 @@
 			children = (
 				ECE18D1E28818E4A003629AB /* AppDelegate.swift */,
 				ECE18D2028818E4A003629AB /* SceneDelegate.swift */,
-				ECE18D2228818E4A003629AB /* MainViewController.swift */,
+				ECE18D4928819DD7003629AB /* MainView */,
 				ECE18D4328819769003629AB /* Constants.swift */,
+				ECE18D522881BD3A003629AB /* StyleSheet */,
 				ECE18D3A288191B4003629AB /* Services */,
 				ECE18D3728819170003629AB /* Model */,
 				ECE18D2A28818E4B003629AB /* Assets.xcassets */,
 				ECE18D2C28818E4B003629AB /* LaunchScreen.storyboard */,
+				ECE18D4728819DBB003629AB /* Main.storyboard */,
 				ECE18D2F28818E4B003629AB /* Info.plist */,
 				ECE18D2728818E4A003629AB /* PagoApp.xcdatamodeld */,
 			);
@@ -102,6 +112,32 @@
 				ECE18D4128819554003629AB /* HTTPrequestError.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		ECE18D4928819DD7003629AB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				ECE18D2228818E4A003629AB /* MainViewController.swift */,
+				ECE18D4A28819DE0003629AB /* MainViewModel.swift */,
+				ECE18D532881BD4B003629AB /* Cells */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		ECE18D522881BD3A003629AB /* StyleSheet */ = {
+			isa = PBXGroup;
+			children = (
+				ECE18D502881B578003629AB /* UIColor + Extensions.swift */,
+			);
+			path = StyleSheet;
+			sourceTree = "<group>";
+		};
+		ECE18D532881BD4B003629AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ECE18D4C28819E13003629AB /* ContactCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE18D4828819DBB003629AB /* Main.storyboard in Resources */,
 				ECE18D2E28818E4B003629AB /* LaunchScreen.storyboard in Resources */,
 				ECE18D2B28818E4B003629AB /* Assets.xcassets in Resources */,
 			);
@@ -177,6 +214,7 @@
 				ECE18D3C28819432003629AB /* HTTPClient + Configuration.swift in Sources */,
 				ECE18D4428819769003629AB /* Constants.swift in Sources */,
 				ECE18D2928818E4A003629AB /* PagoApp.xcdatamodeld in Sources */,
+				ECE18D4D28819E13003629AB /* ContactCell.swift in Sources */,
 				ECE18D3E288194A2003629AB /* HTTPClient.swift in Sources */,
 				ECE18D2328818E4A003629AB /* MainViewController.swift in Sources */,
 				ECE18D1F28818E4A003629AB /* AppDelegate.swift in Sources */,
@@ -185,6 +223,8 @@
 				ECE18D4028819534003629AB /* HTTPRequest.swift in Sources */,
 				ECE18D39288191AA003629AB /* BackendService.swift in Sources */,
 				ECE18D2128818E4A003629AB /* SceneDelegate.swift in Sources */,
+				ECE18D4B28819DE0003629AB /* MainViewModel.swift in Sources */,
+				ECE18D512881B578003629AB /* UIColor + Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +368,6 @@
 				INFOPLIST_FILE = PagoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,7 +395,6 @@
 				INFOPLIST_FILE = PagoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
