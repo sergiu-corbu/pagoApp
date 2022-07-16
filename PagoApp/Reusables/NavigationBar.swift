@@ -11,7 +11,7 @@ import SwiftUI
 struct NavigationBar<TrailingView: View>: View {
     
     let title: String?
-    var titleAlignment: HorizontalAlignment
+    var titleAlignment: HorizontalAlignment = .leading
     @ViewBuilder var trailingView: TrailingView
     
     var body: some View {
@@ -28,6 +28,7 @@ struct NavigationBar<TrailingView: View>: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
         .padding(EdgeInsets(top: 48, leading: 24, bottom: 16, trailing: 24))
+        .background(Color.white)
     }
 }
 

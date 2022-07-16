@@ -37,6 +37,7 @@
 		ECF23A292882C45600551AC8 /* AddContactViewModel_.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A282882C45600551AC8 /* AddContactViewModel_.swift */; };
 		ECF23A2B2882C46400551AC8 /* AddContactViewController_.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A2A2882C46400551AC8 /* AddContactViewController_.swift */; };
 		ECF23A2D2882C97600551AC8 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A2C2882C97600551AC8 /* Buttons.swift */; };
+		ECF23A302882CF0800551AC8 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A2F2882CF0800551AC8 /* InputField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		ECF23A282882C45600551AC8 /* AddContactViewModel_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewModel_.swift; sourceTree = "<group>"; };
 		ECF23A2A2882C46400551AC8 /* AddContactViewController_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController_.swift; sourceTree = "<group>"; };
 		ECF23A2C2882C97600551AC8 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		ECF23A2F2882CF0800551AC8 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				ECE18D4928819DD7003629AB /* UIKit */,
 				ECE18D522881BD3A003629AB /* StyleSheet */,
 				ECE18D3A288191B4003629AB /* Services */,
+				ECF23A2E2882CEF700551AC8 /* Reusables */,
 				ECF23A1D2882B0D200551AC8 /* Utils */,
 				ECE18D3728819170003629AB /* Model */,
 				ECE18D2A28818E4B003629AB /* Assets.xcassets */,
@@ -201,8 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				ECF23A1B2882B0CF00551AC8 /* View + Extensions.swift */,
-				ECF23A2C2882C97600551AC8 /* Buttons.swift */,
-				ECF23A222882C0B300551AC8 /* NavigationBar.swift */,
 				ECF23A202882BC4500551AC8 /* Int + Extensions.swift */,
 			);
 			path = Utils;
@@ -225,6 +226,16 @@
 				ECF23A2A2882C46400551AC8 /* AddContactViewController_.swift */,
 			);
 			path = AddContact;
+			sourceTree = "<group>";
+		};
+		ECF23A2E2882CEF700551AC8 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				ECF23A2C2882C97600551AC8 /* Buttons.swift */,
+				ECF23A2F2882CF0800551AC8 /* InputField.swift */,
+				ECF23A222882C0B300551AC8 /* NavigationBar.swift */,
+			);
+			path = Reusables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				ECF23A2D2882C97600551AC8 /* Buttons.swift in Sources */,
 				ECBEEF002881DA6A00282F3D /* AddContactViewController.swift in Sources */,
 				ECE18D3C28819432003629AB /* HTTPClient + Configuration.swift in Sources */,
+				ECF23A302882CF0800551AC8 /* InputField.swift in Sources */,
 				ECE18D4428819769003629AB /* Constants.swift in Sources */,
 				ECE18D2928818E4A003629AB /* PagoApp.xcdatamodeld in Sources */,
 				ECF23A1F2882B45200551AC8 /* ContactView.swift in Sources */,

@@ -6,19 +6,35 @@
 //
 
 import Foundation
+import Combine
 
 extension AddContact {
     
     class ViewModel: ObservableObject {
         
-        @Published var contact: Contact?
         @Published var selection: Selection?
+        @Published var isLoading = false
+        
+        @Published var contact: Contact
+        @Published var firstName = ""
+        @Published var lastName = ""
+        @Published var phoneNumber = ""
         
         let state: State
         
+        var primaryButtonEnabled: Bool {
+            return true
+        }
+        
+        let onContactSaved = PassthroughSubject<Void, Never>()
+        
         init(contact: Contact?) {
-            self.contact = contact
+            self.contact = contact ?? Contact()
             self.state = contact != nil ? .update : .addContact
+        }
+        
+        func primaryButtonAction() {
+            
         }
     }
 }
@@ -32,7 +48,7 @@ extension AddContact {
         
         var primaryButtonTitle: String {
             switch self {
-            case .addContact: return "Save"
+            case .addContact: return "Salveaza"
             case .update: return "Update"
             }
         }
@@ -40,6 +56,15 @@ extension AddContact {
     
     enum Selection: Int, Hashable, Identifiable {
         case firstname, lastname, phone, email
+        
+        var title: String {
+            switch self {
+            case .firstname: return "PRENUME"
+            case .lastname: return "NUME"
+            case .phone: return "TELEFON"
+            case .email: return "EMAIL"
+            }
+        }
         
         var id: Int {
             rawValue

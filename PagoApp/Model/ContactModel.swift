@@ -11,10 +11,11 @@ import UIKit
 struct Contact: Identifiable, Hashable, Codable {
     
     let id: Int
-    let name: String
-    let email: String
+    var name: String
+    var email: String
     let gender: String
     let status: String
+    var phoneNumber: String?
     
     var contactInitials: String {
         let firstInitial = name.first?.uppercased() ?? ""
@@ -30,6 +31,18 @@ struct Contact: Identifiable, Hashable, Codable {
         }
         
         return uiImage
+    }
+}
+
+extension Contact {
+    
+    //empty
+    init() {
+        self.id = Int.random(in: (0..<1000))
+        self.name = ""
+        self.gender = ""
+        self.email = ""
+        self.status = "active"
     }
 }
 
