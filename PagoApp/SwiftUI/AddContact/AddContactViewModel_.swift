@@ -12,34 +12,74 @@ extension AddContact {
     
     class ViewModel: ObservableObject {
         
-        @Published var selection: Selection?
         @Published var isLoading = false
-        
         @Published var contact: Contact
         @Published var firstName = ""
         @Published var lastName = ""
         @Published var phoneNumber = ""
         
+        @Published var phoneNumberError: String?
+        @Published var emailError: String?
+        
         let state: State
         
         var primaryButtonEnabled: Bool {
-            return true
+            !firstName.isEmpty && !lastName.isEmpty
         }
         
         let onContactSaved = PassthroughSubject<Void, Never>()
         
         init(contact: Contact?) {
-            self.contact = contact ?? Contact()
-            self.state = contact != nil ? .update : .addContact
+            if let contact {
+                self.contact = contact
+                let components = contact.name.components(separatedBy: " ")
+                self.firstName = components.first ?? ""
+                self.lastName = components.last ?? ""
+                self.phoneNumber = contact.phoneNumber ?? ""
+                self.state = .update
+            } else {
+                self.contact = Contact()
+                self.state = .addContact
+            }
         }
         
-        func primaryButtonAction() {
-            
+        @MainActor
+        func primaryButtonAction() async {
+            isLoading = true
+            do {
+                if !phoneNumber.isEmpty {
+                    try Validation.validatePhoneNumber(for: phoneNumber)
+                }
+                if !contact.email.isEmpty {
+                    try Validation.validateEmail(for: contact.email)
+                }
+                switch state {
+                case .addContact:
+                    break
+                case .update:
+                    break
+                }
+            } catch(let error as ValidationError) {
+                print(error.localizedDescription)
+                switch error {
+                case .email:
+                    emailError = error.localizedDescription
+                case .phone:
+                    phoneNumberError = error.localizedDescription
+                default: break
+                }
+                await Task.sleep(seconds: 1.5)
+                emailError = nil
+                phoneNumberError = nil
+            } catch {
+                print(error.localizedDescription)
+            }
+            isLoading = false
         }
     }
 }
 
-typealias ContactSelection = AddContact.Selection
+typealias ContactProperty = AddContact.ContactProperty
 
 extension AddContact {
     enum State {
@@ -54,7 +94,7 @@ extension AddContact {
         }
     }
     
-    enum Selection: Int, Hashable, Identifiable {
+    enum ContactProperty: Int, Hashable {
         case firstname, lastname, phone, email
         
         var title: String {
@@ -64,10 +104,6 @@ extension AddContact {
             case .phone: return "TELEFON"
             case .email: return "EMAIL"
             }
-        }
-        
-        var id: Int {
-            rawValue
         }
     }
 }

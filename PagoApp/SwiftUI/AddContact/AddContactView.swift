@@ -29,10 +29,10 @@ struct AddContact {
         private var inputFields: some View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    InputField(input: $viewModel.lastName, inputState: .lastname)
-                    InputField(input: $viewModel.firstName, inputState: .firstname)
-                    InputField(input: $viewModel.phoneNumber, inputState: .phone)
-                    InputField(input: $viewModel.contact.email, inputState: .email)
+                    InputField(input: $viewModel.lastName, contctProperty: .lastname)
+                    InputField(input: $viewModel.firstName, contctProperty: .firstname)
+                    InputField(input: $viewModel.phoneNumber, contctProperty: .phone, error: viewModel.phoneNumberError)
+                    InputField(input: $viewModel.contact.email, contctProperty: .email, error: viewModel.emailError)
                 }
                 .padding(.vertical, 16)
             }
@@ -42,9 +42,11 @@ struct AddContact {
             Buttons.PrimaryButton(
                 title: viewModel.state.primaryButtonTitle,
                 isEnabled: viewModel.primaryButtonEnabled,
-                isLoading: viewModel.isLoading,
-                action: viewModel.primaryButtonAction
-            )
+                isLoading: viewModel.isLoading) {
+                    Task(priority:  .userInitiated) {
+                        await viewModel.primaryButtonAction()
+                    }
+                }
         }
     }
 }

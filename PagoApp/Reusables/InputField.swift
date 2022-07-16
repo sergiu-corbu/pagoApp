@@ -10,7 +10,8 @@ import SwiftUI
 struct InputField: View {
     
     @Binding var input: String
-    let inputState: ContactSelection
+    let contctProperty: ContactProperty
+    var error: String?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -22,11 +23,15 @@ struct InputField: View {
             Color.white
                 .cornerRadius(12)
         }
+        .overlay {
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(error != nil ? Color.red : .clear, lineWidth: 1.5)
+        }
         .padding(.horizontal, 16)
     }
     
     private var titleView: some View {
-        Text(inputState.title)
+        Text(contctProperty.title)
             .font(.system(size: 12, weight: .semibold))
             .foregroundColor(.gray)
     }
@@ -35,6 +40,15 @@ struct InputField: View {
         VStack(alignment: .leading, spacing: 4) {
             TextField("", text: $input)
                 .font(.system(size: 14, weight: .medium))
+                .foregroundColor(error != nil ? .red : .black)
+            if let error {
+                Text(error)
+                    .foregroundColor(.red)
+                    .font(.system(size: 12))
+                    .transition(
+                        .opacity.animation(.easeInOut(duration: 0.25))
+                    )
+            }
             Divider()
         }
     }
@@ -43,9 +57,9 @@ struct InputField: View {
 struct InputField_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            InputField(input: .constant(""), inputState: .firstname)
-            InputField(input: .constant("some email"), inputState: .email)
-            InputField(input: .constant("07774"), inputState: .phone)
+            InputField(input: .constant(""), contctProperty: .firstname)
+            InputField(input: .constant("some email"), contctProperty: .email)
+            InputField(input: .constant("07774"), contctProperty: .phone, error: "Invalid phone")
         }
         .padding()
         .background {

@@ -18,10 +18,9 @@ extension MainScreen {
         let onSelectContact = PassthroughSubject<Contact?, Never>()
         
         init() {
-            contacts = Contact.mockContacts
-//            Task(priority: .background) {
-//                await fetchContacts()
-//            }
+            Task(priority: .background) {
+                await fetchContacts()
+            }
         }
         
         func fetchContacts() async {

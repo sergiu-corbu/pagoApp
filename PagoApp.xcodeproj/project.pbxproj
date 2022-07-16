@@ -38,6 +38,8 @@
 		ECF23A2B2882C46400551AC8 /* AddContactViewController_.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A2A2882C46400551AC8 /* AddContactViewController_.swift */; };
 		ECF23A2D2882C97600551AC8 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A2C2882C97600551AC8 /* Buttons.swift */; };
 		ECF23A302882CF0800551AC8 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A2F2882CF0800551AC8 /* InputField.swift */; };
+		ECF23A322882DFC500551AC8 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A312882DFC500551AC8 /* Validation.swift */; };
+		ECF23A342882E6DA00551AC8 /* Task + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A332882E6DA00551AC8 /* Task + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		ECF23A2A2882C46400551AC8 /* AddContactViewController_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController_.swift; sourceTree = "<group>"; };
 		ECF23A2C2882C97600551AC8 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		ECF23A2F2882CF0800551AC8 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		ECF23A312882DFC500551AC8 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		ECF23A332882E6DA00551AC8 /* Task + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				ECF23A1B2882B0CF00551AC8 /* View + Extensions.swift */,
+				ECF23A312882DFC500551AC8 /* Validation.swift */,
 				ECF23A202882BC4500551AC8 /* Int + Extensions.swift */,
+				ECF23A332882E6DA00551AC8 /* Task + Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -323,9 +329,11 @@
 				ECF23A182882B08B00551AC8 /* MainScreenViewModel.swift in Sources */,
 				ECBEEF032881DA7700282F3D /* AddContactViewModel.swift in Sources */,
 				ECF23A1C2882B0CF00551AC8 /* View + Extensions.swift in Sources */,
+				ECF23A322882DFC500551AC8 /* Validation.swift in Sources */,
 				ECE18D3E288194A2003629AB /* HTTPClient.swift in Sources */,
 				ECF23A152882B05600551AC8 /* MainScreenView.swift in Sources */,
 				ECE18D2328818E4A003629AB /* MainViewController.swift in Sources */,
+				ECF23A342882E6DA00551AC8 /* Task + Extensions.swift in Sources */,
 				ECF23A1A2882B09F00551AC8 /* MainScreenViewController.swift in Sources */,
 				ECF23A262882C41C00551AC8 /* AddContactView.swift in Sources */,
 				ECE18D1F28818E4A003629AB /* AppDelegate.swift in Sources */,

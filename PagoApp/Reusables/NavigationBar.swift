@@ -16,19 +16,26 @@ struct NavigationBar<TrailingView: View>: View {
     
     var body: some View {
         ZStack {
-            if let title {
-                Text(title)
-                    .font(.system(size: 24, weight: .bold))
-                    .frame(
-                        maxWidth: .infinity,
-                        alignment: Alignment(horizontal: titleAlignment, vertical: .center)
-                    )
-            }
+            navigationTitleView
             trailingView
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
-        .padding(EdgeInsets(top: 48, leading: 24, bottom: 16, trailing: 24))
+        .padding(
+            EdgeInsets(top: 48, leading: 24, bottom: 16, trailing: 24)
+        )
         .background(Color.white)
+    }
+    
+    @ViewBuilder
+    private var navigationTitleView: some View {
+        if let title {
+            Text(title)
+                .font(.system(size: 24, weight: .bold))
+                .frame(
+                    maxWidth: .infinity,
+                    alignment: Alignment(horizontal: titleAlignment, vertical: .center)
+                )
+        }
     }
 }
 

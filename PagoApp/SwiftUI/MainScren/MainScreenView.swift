@@ -61,7 +61,7 @@ struct MainScreen {
         }
         
         private var contactsList: some View {
-            VStack(alignment: .leading, spacing: 0) {
+            LazyVStack(alignment: .leading, spacing: 0) {
                 ForEach(viewModel.contacts, id: \.id) { contact in
                     ContactView(
                         contact: contact,
