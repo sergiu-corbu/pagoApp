@@ -93,8 +93,7 @@
 			children = (
 				ECE18D1E28818E4A003629AB /* AppDelegate.swift */,
 				ECE18D2028818E4A003629AB /* SceneDelegate.swift */,
-				ECBEEF012881DA6E00282F3D /* AddContact */,
-				ECE18D4928819DD7003629AB /* MainView */,
+				ECE18D4928819DD7003629AB /* UIKit */,
 				ECE18D4328819769003629AB /* Constants.swift */,
 				ECE18D522881BD3A003629AB /* StyleSheet */,
 				ECE18D3A288191B4003629AB /* Services */,
@@ -128,14 +127,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		ECE18D4928819DD7003629AB /* MainView */ = {
+		ECE18D4928819DD7003629AB /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				ECE18D2228818E4A003629AB /* MainViewController.swift */,
-				ECE18D4A28819DE0003629AB /* MainViewModel.swift */,
+				ECBEEF012881DA6E00282F3D /* AddContact */,
+				ECF23A132882AFE400551AC8 /* MainViewController */,
 				ECE18D532881BD4B003629AB /* Cells */,
 			);
-			path = MainView;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		ECE18D522881BD3A003629AB /* StyleSheet */ = {
@@ -152,6 +151,15 @@
 				ECE18D4C28819E13003629AB /* ContactCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		ECF23A132882AFE400551AC8 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECE18D2228818E4A003629AB /* MainViewController.swift */,
+				ECE18D4A28819DE0003629AB /* MainViewModel.swift */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

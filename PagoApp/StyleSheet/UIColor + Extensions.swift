@@ -7,9 +7,15 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 extension UIColor {
     
     static let aliceBlue = UIColor(named: "aliceBlue")!
     static let wildBlueYonder = UIColor(named: "wildBlueYonder")!
+}
+
+extension Color {
+    static let aliceBlue = Color("aliceBlue")
+    static let wildBlueYonder = Color("wildBlueYonder")
 }
