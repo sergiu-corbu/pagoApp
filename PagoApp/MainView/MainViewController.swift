@@ -20,9 +20,11 @@ class MainViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.register(ContactCell.self, forCellReuseIdentifier: ContactCell.cellReuseIdentifier)
-        viewModel.tableView = tableView
         tableView.estimatedRowHeight = 94
         tableView.contentInset.top = 12
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        addRefreshControll()
+        viewModel.tableView = tableView
     }
     
     private func setupNavigationBar() {
@@ -32,18 +34,32 @@ class MainViewController: UITableViewController {
         titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         titleLabel.textAlignment = .left
         navigationItem.titleView = titleLabel
-        navigationController?.navigationBar.backgroundColor = .white
         
-        if let navigationBar = navigationController?.navigationBar {
-            titleLabel.widthAnchor.constraint(equalTo: navigationBar.widthAnchor, constant: -40).isActive = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "addContact-icon"),
+            style: .plain,
+            target: self,
+            action: #selector(addContact)
+        )
+    }
+    
+    private func addRefreshControll() {
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+    }
+    
+    @objc func reloadData() {
+        Task(priority: .userInitiated) {
+            tableView.refreshControl?.beginRefreshing()
+            await viewModel.fetchContacts()
+            tableView.refreshControl?.endRefreshing()
         }
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addContact-icon"), style: .plain, target: self, action: #selector(addContact))
     }
     
     @objc
     private func addContact() {
-        navigationController?.pushViewController(UIViewController(), animated: true)
+        navigationController?.pushViewController(AddContactViewController(contact: nil), animated: true)
     }
 }
 
@@ -67,8 +83,8 @@ extension MainViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let contact = viewModel.contacts[indexPath.row]
-        //navigationController?.pushViewController(UIViewController(), animated: true)
+        let contact = viewModel.contacts[indexPath.row]
+        navigationController?.pushViewController(AddContactViewController(contact: contact), animated: true)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

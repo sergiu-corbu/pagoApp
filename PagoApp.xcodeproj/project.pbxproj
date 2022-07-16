@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECBEEF002881DA6A00282F3D /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEEEFF2881DA6A00282F3D /* AddContactViewController.swift */; };
+		ECBEEF032881DA7700282F3D /* AddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEEF022881DA7700282F3D /* AddContactViewModel.swift */; };
 		ECE18D1F28818E4A003629AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D1E28818E4A003629AB /* AppDelegate.swift */; };
 		ECE18D2128818E4A003629AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D2028818E4A003629AB /* SceneDelegate.swift */; };
 		ECE18D2328818E4A003629AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE18D2228818E4A003629AB /* MainViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ECBEEEFF2881DA6A00282F3D /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		ECBEEF022881DA7700282F3D /* AddContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewModel.swift; sourceTree = "<group>"; };
 		ECE18D1B28818E4A003629AB /* PagoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE18D1E28818E4A003629AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE18D2028818E4A003629AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECBEEF012881DA6E00282F3D /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				ECBEEEFF2881DA6A00282F3D /* AddContactViewController.swift */,
+				ECBEEF022881DA7700282F3D /* AddContactViewModel.swift */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
 		ECE18D1228818E4A003629AB = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 			children = (
 				ECE18D1E28818E4A003629AB /* AppDelegate.swift */,
 				ECE18D2028818E4A003629AB /* SceneDelegate.swift */,
+				ECBEEF012881DA6E00282F3D /* AddContact */,
 				ECE18D4928819DD7003629AB /* MainView */,
 				ECE18D4328819769003629AB /* Constants.swift */,
 				ECE18D522881BD3A003629AB /* StyleSheet */,
@@ -176,7 +190,7 @@
 				};
 			};
 			buildConfigurationList = ECE18D1628818E4A003629AB /* Build configuration list for PBXProject "PagoApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -211,10 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBEEF002881DA6A00282F3D /* AddContactViewController.swift in Sources */,
 				ECE18D3C28819432003629AB /* HTTPClient + Configuration.swift in Sources */,
 				ECE18D4428819769003629AB /* Constants.swift in Sources */,
 				ECE18D2928818E4A003629AB /* PagoApp.xcdatamodeld in Sources */,
 				ECE18D4D28819E13003629AB /* ContactCell.swift in Sources */,
+				ECBEEF032881DA7700282F3D /* AddContactViewModel.swift in Sources */,
 				ECE18D3E288194A2003629AB /* HTTPClient.swift in Sources */,
 				ECE18D2328818E4A003629AB /* MainViewController.swift in Sources */,
 				ECE18D1F28818E4A003629AB /* AppDelegate.swift in Sources */,
@@ -292,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -370,6 +386,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,6 +414,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -21,12 +21,13 @@ class MainViewModel {
     weak var tableView: UITableView?
     
     init() {
-        Task(priority: .background) {
-            await fetchContacts()
-        }
+        contacts = Contact.mockContacts
+//        Task(priority: .background) {
+//            await fetchContacts()
+//        }
     }
     
-    private func fetchContacts() async {
+    @objc func fetchContacts() async {
         do {
             let contacts = try await BackendService.loadContacts().filter {
                 $0.status == "active"

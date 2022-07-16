@@ -15,3 +15,10 @@ struct Contact: Identifiable, Hashable, Codable {
     let gender: String
     let status: String
 }
+
+extension Contact {
+    static let mockContacts = Array(
+        repeating: Contact(id: Int.random(in: (1...20)), name: "James Boooond", email: "", gender: "", status: ""),
+        count: 20
+    )
+}
