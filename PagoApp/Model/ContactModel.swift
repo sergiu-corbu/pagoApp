@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Contact: Identifiable, Hashable, Codable {
     
@@ -14,6 +15,22 @@ struct Contact: Identifiable, Hashable, Codable {
     let email: String
     let gender: String
     let status: String
+    
+    var contactInitials: String {
+        let firstInitial = name.first?.uppercased() ?? ""
+        let secondInitial = name.components(separatedBy: " ").last?.first?.uppercased() ?? ""
+        return firstInitial + secondInitial
+    }
+    
+    // for iOS 13,14 - AsyncImage API not available
+    func randomUIImage() -> UIImage? {
+        let imageData = try? Data(contentsOf: Constants.randomImageURL)
+        guard let imageData, let uiImage = UIImage(data: imageData) else {
+            return nil
+        }
+        
+        return uiImage
+    }
 }
 
 extension Contact {
