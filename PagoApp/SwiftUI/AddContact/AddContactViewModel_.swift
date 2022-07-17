@@ -27,9 +27,12 @@ extension AddContact {
             !firstName.isEmpty && !lastName.isEmpty
         }
         
-        let onContactSaved = PassthroughSubject<Void, Never>()
+        let onContactSaved = PassthroughSubject<Contact, Never>()
         
-        init(contact: Contact?) {
+        let contactDataSource: ContactsDataSource
+        
+        init(contactDataSource: ContactsDataSource, contact: Contact?) {
+            self.contactDataSource = contactDataSource
             if let contact {
                 self.contact = contact
                 let components = contact.name.components(separatedBy: " ")
@@ -49,16 +52,23 @@ extension AddContact {
             do {
                 if !phoneNumber.isEmpty {
                     try Validation.validatePhoneNumber(for: phoneNumber)
+                    contact.phoneNumber = phoneNumber
                 }
                 if !contact.email.isEmpty {
                     try Validation.validateEmail(for: contact.email)
                 }
+                
+                contact.name = firstName + " " + lastName
+                
                 switch state {
                 case .addContact:
-                    break
+                    await contactDataSource.addContacts([contact])
                 case .update:
-                    break
+                    await contactDataSource.updateContact(contact)
                 }
+                
+                onContactSaved.send(contact)
+                
             } catch(let error as ValidationError) {
                 print(error.localizedDescription)
                 switch error {

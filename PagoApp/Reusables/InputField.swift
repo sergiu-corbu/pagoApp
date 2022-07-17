@@ -41,6 +41,7 @@ struct InputField: View {
             TextField("", text: $input)
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(error != nil ? .red : .black)
+                .autocorrectionDisabled(true)
             if let error {
                 Text(error)
                     .foregroundColor(.red)

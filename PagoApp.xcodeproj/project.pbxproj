@@ -40,6 +40,7 @@
 		ECF23A302882CF0800551AC8 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A2F2882CF0800551AC8 /* InputField.swift */; };
 		ECF23A322882DFC500551AC8 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A312882DFC500551AC8 /* Validation.swift */; };
 		ECF23A342882E6DA00551AC8 /* Task + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A332882E6DA00551AC8 /* Task + Extensions.swift */; };
+		ECF23A362882E83500551AC8 /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF23A352882E83500551AC8 /* ContactsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		ECF23A2F2882CF0800551AC8 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		ECF23A312882DFC500551AC8 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		ECF23A332882E6DA00551AC8 /* Task + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task + Extensions.swift"; sourceTree = "<group>"; };
+		ECF23A352882E83500551AC8 /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				ECE18D1E28818E4A003629AB /* AppDelegate.swift */,
 				ECE18D2028818E4A003629AB /* SceneDelegate.swift */,
 				ECE18D4328819769003629AB /* Constants.swift */,
+				ECF23A352882E83500551AC8 /* ContactsDataSource.swift */,
 				ECF23A242882C40500551AC8 /* SwiftUI */,
 				ECE18D4928819DD7003629AB /* UIKit */,
 				ECE18D522881BD3A003629AB /* StyleSheet */,
@@ -343,6 +346,7 @@
 				ECE18D39288191AA003629AB /* BackendService.swift in Sources */,
 				ECE18D2128818E4A003629AB /* SceneDelegate.swift in Sources */,
 				ECF23A2B2882C46400551AC8 /* AddContactViewController_.swift in Sources */,
+				ECF23A362882E83500551AC8 /* ContactsDataSource.swift in Sources */,
 				ECE18D4B28819DE0003629AB /* MainViewModel.swift in Sources */,
 				ECE18D512881B578003629AB /* UIColor + Extensions.swift in Sources */,
 			);

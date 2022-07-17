@@ -28,7 +28,17 @@ extension MainScreen {
         }
         
         private func showAddContactView(_ contact: Contact?) {
-            let addContactViewModel = AddContact.ViewModel(contact: contact)
+            
+            let addContactViewModel = AddContact.ViewModel(
+                contactDataSource: viewModel.contactDataSource,
+                contact: contact
+            )
+            addContactViewModel.onContactSaved
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] contact in
+                    self?.navigationController?.popViewController(animated: true)
+                    self?.viewModel.handleAddedOrUpdatedContact(contact)
+                }.store(in: &cancellables)
             
             navigationController?.pushViewController(
                 AddContact.ViewController(viewModel: addContactViewModel),

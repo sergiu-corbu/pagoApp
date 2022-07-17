@@ -53,8 +53,8 @@ struct AddContact {
 
 struct AddContact_Previews: PreviewProvider {
     
-    static var viewModel1 = AddContact.ViewModel(contact: .mockContacts.first)
-    static var viewModel2 = AddContact.ViewModel(contact: nil)
+    static var viewModel1 = AddContact.ViewModel(contactDataSource: .init(), contact: .mockContacts.first)
+    static var viewModel2 = AddContact.ViewModel(contactDataSource: .init(), contact: nil)
     
     static var previews: some View {
         Group {
