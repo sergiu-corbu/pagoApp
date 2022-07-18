@@ -28,7 +28,7 @@ struct NavigationBar<TrailingView: View>: View {
     
     @ViewBuilder
     private var navigationTitleView: some View {
-        if let title {
+        if let title = title {
             Text(title)
                 .font(.system(size: 24, weight: .bold))
                 .frame(

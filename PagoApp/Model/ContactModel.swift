@@ -26,7 +26,7 @@ struct Contact: Identifiable, Hashable, Codable {
     // for iOS 13,14 - AsyncImage API not available
     func randomUIImage() -> UIImage? {
         let imageData = try? Data(contentsOf: Constants.randomImageURL)
-        guard let imageData, let uiImage = UIImage(data: imageData) else {
+        guard let imageData = imageData, let uiImage = UIImage(data: imageData) else {
             return nil
         }
         

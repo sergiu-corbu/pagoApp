@@ -33,7 +33,7 @@ extension AddContact {
         
         init(contactDataSource: ContactsDataSource, contact: Contact?) {
             self.contactDataSource = contactDataSource
-            if let contact {
+            if let contact = contact {
                 self.contact = contact
                 let components = contact.name.components(separatedBy: " ")
                 self.firstName = components.first ?? ""
